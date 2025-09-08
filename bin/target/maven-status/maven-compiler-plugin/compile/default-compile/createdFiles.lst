@@ -1,0 +1,7 @@
+com\yamuna\bookstoreapi\controller\BookController.class
+com\yamuna\bookstoreapi\entity\Book.class
+com\yamuna\bookstoreapi\entity\Author.class
+com\yamuna\bookstoreapi\controller\AuthorController.class
+com\yamuna\bookstoreapi\repository\AuthorRepository.class
+com\yamuna\bookstoreapi\repository\BookRepository.class
+com\yamuna\bookstoreapi\BookstoreApplication.class

@@ -1,0 +1,184 @@
+{
+  "info": {
+    "name": "Bookstore API",
+    "_postman_id": "d1a2b3c4-5678-90ab-cdef-1234567890ab",
+    "description": "Postman collection for Bookstore API CRUD operations",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Authors",
+      "item": [
+        {
+          "name": "Get All Authors",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8081/authors",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["authors"]
+            }
+          }
+        },
+        {
+          "name": "Get Author by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8081/authors/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["authors", "1"]
+            }
+          }
+        },
+        {
+          "name": "Add Author",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 1,\n  \"name\": \"J.K. Rowling\",\n  \"email\": \"jkrowling@example.com\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8081/authors",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["authors"]
+            }
+          }
+        },
+        {
+          "name": "Update Author",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"J.K. Rowling Updated\",\n  \"email\": \"jkupdated@example.com\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8081/authors/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["authors", "1"]
+            }
+          }
+        },
+        {
+          "name": "Delete Author",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8081/authors/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["authors", "1"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Books",
+      "item": [
+        {
+          "name": "Get All Books",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8081/books",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["books"]
+            }
+          }
+        },
+        {
+          "name": "Get Book by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8081/books/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["books", "1"]
+            }
+          }
+        },
+        {
+          "name": "Add Book",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 1,\n  \"title\": \"Harry Potter and the Philosopher's Stone\",\n  \"isbn\": \"1234567890\",\n  \"price\": 499.99,\n  \"publishedAt\": \"1997\",\n  \"author_id\": 1\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8081/books",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["books"]
+            }
+          }
+        },
+        {
+          "name": "Update Book",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Harry Potter Updated\",\n  \"isbn\": \"9876543210\",\n  \"price\": 599.99,\n  \"publishedAt\": \"1998\",\n  \"author_id\": 1\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8081/books/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["books", "1"]
+            }
+          }
+        },
+        {
+          "name": "Delete Book",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8081/books/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["books", "1"]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
